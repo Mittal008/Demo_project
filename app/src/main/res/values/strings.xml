@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Demo</string>
+
+
+    <string name="main_boarding_title">Let\'s tell people\'s point of view, let\'s do it. A new beginning with online voting</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

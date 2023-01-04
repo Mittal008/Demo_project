@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Only for dp-->
+    <dimen name="sub_normal">18dp</dimen>
+    <dimen name="normal">20dp</dimen>
+    <dimen name="heading">22dp</dimen>
+
+
+    <!--Only for sp-->
+    <dimen name="normalText">20sp</dimen>
+    <dimen name="sub_heading">22sp</dimen>
+    <dimen name="main_heading">24sp</dimen>
+</resources>

@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--   <data>
+           <variable
+               name="User_Profile"
+               type="" />
+       </data>-->
+
+
+    <!--For Normal mode-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_color_transparent2"
+        tools:context=".Fragments.UserProfileFragment">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutNormalMode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="45dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="70dp"
+                app:cardElevation="10dp"
+                app:cardMaxElevation="12dp"
+                app:cardPreventCornerOverlap="true"
+                app:layout_constraintEnd_toEndOf="@id/right"
+                app:layout_constraintStart_toStartOf="@id/left"
+                app:layout_constraintTop_toTopOf="@id/top">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_launcher_foreground" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tv_Name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="30dp"
+                android:drawableStart="@drawable/icon_person"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Name"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/normal"
+                app:layout_constraintEnd_toEndOf="@id/right"
+                app:layout_constraintStart_toStartOf="@id/left"
+                app:layout_constraintTop_toBottomOf="@id/cardViewImage" />
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="@drawable/icon_email"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Email"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/normal"
+                app:layout_constraintEnd_toEndOf="@id/right"
+                app:layout_constraintStart_toStartOf="@id/left"
+                app:layout_constraintTop_toBottomOf="@id/tv_Name" />
+
+            <TextView
+                android:id="@+id/tv_Phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="@drawable/icon_phone"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Phone Number"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/normal"
+                app:layout_constraintEnd_toEndOf="@id/right"
+                app:layout_constraintStart_toStartOf="@id/left"
+                app:layout_constraintTop_toBottomOf="@id/tv_email" />
+
+            <TextView
+                android:id="@+id/tv_Gender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="@drawable/icon_gender"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="gender"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/normal"
+                app:layout_constraintEnd_toEndOf="@id/right"
+                app:layout_constraintStart_toStartOf="@id/left"
+                app:layout_constraintTop_toBottomOf="@id/tv_Phone" />
+
+            <TextView
+                android:id="@+id/tv_Dob"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="@drawable/icon_dob"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Date of Birth"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/normal"
+                app:layout_constraintEnd_toEndOf="@id/right"
+                app:layout_constraintStart_toStartOf="@id/left"
+                app:layout_constraintTop_toBottomOf="@id/tv_Gender" />
+
+            <TextView
+                android:id="@+id/tv_college"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="@drawable/icon_college"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="College Name"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/normal"
+                app:layout_constraintEnd_toEndOf="@id/right"
+                app:layout_constraintStart_toStartOf="@id/left"
+                app:layout_constraintTop_toBottomOf="@id/tv_Dob" />
+
+            <TextView
+                android:id="@+id/btnLogout"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/btn_"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:text="Log Out"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sub_heading"
+                app:layout_constraintBottom_toTopOf="@+id/middle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/middle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".95" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/left"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".95" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <!--_________________________________________________-->
+        <!--For Edit Mode-->
+        <!--_________________________________________________-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutEditMode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/app_color_main_bg"
+            android:visibility="gone">
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/editCardViewImage"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_marginTop="45dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="70dp"
+                app:cardElevation="10dp"
+                app:cardMaxElevation="12dp"
+                app:cardPreventCornerOverlap="true"
+                app:layout_constraintEnd_toEndOf="@id/rightGl"
+                app:layout_constraintStart_toStartOf="@id/leftGl"
+                app:layout_constraintTop_toTopOf="@id/topGl">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_launcher_foreground" />
+
+            </androidx.cardview.widget.CardView>
+
+
+                <EditText
+                    android:id="@+id/et_Name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="30dp"
+                    android:drawableStart="@drawable/icon_person"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Name"
+                    android:focusable="false"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/sub_normal"
+                    app:backgroundTint="@color/white"
+                    app:layout_constraintEnd_toEndOf="@id/rightGl"
+                    app:layout_constraintStart_toStartOf="@id/leftGl"
+                    app:layout_constraintTop_toBottomOf="@id/editCardViewImage" />
+
+                <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="5dp"
+                    android:drawableStart="@drawable/icon_email"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Email"
+                    android:focusable="false"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/sub_normal"
+                    app:backgroundTint="@color/white"
+                    app:layout_constraintEnd_toEndOf="@id/rightGl"
+                    app:layout_constraintStart_toStartOf="@id/leftGl"
+                    app:layout_constraintTop_toBottomOf="@id/et_Name" />
+
+                <EditText
+                    android:id="@+id/et_Phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="5dp"
+                    android:drawableStart="@drawable/icon_phone"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Phone Number"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/sub_normal"
+                    app:backgroundTint="@color/white"
+                    app:layout_constraintEnd_toEndOf="@id/rightGl"
+                    app:layout_constraintStart_toStartOf="@id/leftGl"
+                    app:layout_constraintTop_toBottomOf="@id/et_email" />
+
+                <EditText
+                    android:id="@+id/et_Gender"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="5dp"
+                    android:drawableStart="@drawable/icon_gender"
+                    android:drawableEnd="@drawable/icon_arrow_drop"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="gender"
+                    android:focusable="false"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/sub_normal"
+                    app:backgroundTint="@color/white"
+                    app:layout_constraintEnd_toEndOf="@id/rightGl"
+                    app:layout_constraintStart_toStartOf="@id/leftGl"
+                    app:layout_constraintTop_toBottomOf="@id/et_Phone" />
+
+                <EditText
+                    android:id="@+id/et_Dob"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="5dp"
+                    android:drawableStart="@drawable/icon_dob"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Date of Birth"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/sub_normal"
+                    app:backgroundTint="@color/white"
+                    app:layout_constraintEnd_toEndOf="@id/rightGl"
+                    app:layout_constraintStart_toStartOf="@id/leftGl"
+                    app:layout_constraintTop_toBottomOf="@id/et_Gender" />
+
+                <EditText
+                    android:id="@+id/et_college"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="5dp"
+                    android:drawableStart="@drawable/icon_college"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="College Name"
+                    android:singleLine="true"
+                    android:focusable="false"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/sub_normal"
+                    app:backgroundTint="@color/white"
+                    app:layout_constraintEnd_toEndOf="@id/rightGl"
+                    app:layout_constraintStart_toStartOf="@id/leftGl"
+                    app:layout_constraintTop_toBottomOf="@id/et_Dob" />
+
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/middleGl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".95" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/topGl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/leftGl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/rightGl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".95" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
